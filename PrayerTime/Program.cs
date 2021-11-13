@@ -17,7 +17,7 @@ namespace PrayerTime
                 .ConfigureServices(Configure);
         private static void Configure(HostBuilderContext context, IServiceCollection services)
         {
-            services.AddSingleton<TelegramBotClient>(b => new TelegramBotClient("1961222925:AAGL2i3ORlv1ShAodMOdLSb85PHwsUW3hBs"));
+            services.AddSingleton<TelegramBotClient>(b => new TelegramBotClient(""));
             services.AddHostedService<Bot>();
             services.AddTransient<IStorageService, InternalStorageService>();
             services.AddTransient<TimingsByLLService>();
